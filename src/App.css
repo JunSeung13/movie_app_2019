@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+body, .container{
+    margin: 0;
+    padding: 0;
+    background-color: #272B2D;
+    height: 100%;
+    width: 100%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loader{
+    margin: 0;
+    padding: 0;
+    height: 33%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: #fafafa;
+    background-color: #383A3C;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movies, .movie{
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9),
+    0 18px 36px -18px rgba(0, 0, 0, 0.9), 0 -12px 36px -8px rgba(0, 0, 0, 0.9);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movies{
+    padding: 20px 50px 50px 50px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.movie{
+    width: 45%;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 70px;
+    background-color: #fafafa;
+    border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie img {
+    max-width: 150px;
+    width: 100%;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9),
+    0 18px 36px -18px rgba(0, 0, 0, 0.9), 0 -12px 36px -8px rgba(0, 0, 0, 0.9);
+}
+
+.movie__title, .movie__year, .movie__genres, .movie__summary{
+    max-width: 90%;
+    margin: 5px 20px 0px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.movie__title{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 15px 20px 0px 0px;
+    color: #272B2D;
+}
+
+.movie__year{
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.movie__genres{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.genres__genre{
+    margin-right: 7px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.movie__summary{
+    opacity: 0.6;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
